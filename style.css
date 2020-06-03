@@ -1,0 +1,335 @@
+@font-face {
+  font-family: ALSStory;
+  src: local(ALSStory),
+    url(/path/to/ALSStory.woff2) format("woff2"),
+    url(/path/to/ALSStory.woff) format("woff"),
+    url(/path/to/ALSStory.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: ALSStory, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  flood-color: #000000;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.27;
+}
+
+h2, p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 1200px;
+     
+  }
+}
+
+@media (min-width: 1260px) {
+  .container {
+    min-width: 1200px;
+    padding: 0 45px; 
+  }
+}
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #6d7278;
+}
+
+.logo {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.43;
+  letter-spacing: 1.5px;
+  
+}
+
+.timing {
+  font-size: 14px;
+  line-height: 1.36;
+  padding: 0 15px;
+}
+
+.two {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .two {
+    display: block;
+  }
+  .one {
+    display: none;
+  }
+}
+
+.subtitle {
+  width: 100%;
+  max-width: 485px;
+  padding: 8px 0;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.offer {
+  background-color: #142536;
+  color: #fff;
+}
+
+.accordion {
+  background-color: #142536;
+  color: #fff;
+  cursor: pointer;
+  padding: 0px;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #405265;
+  border-bottom: 1px solid #405265; 
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  position: relative;
+}
+
+.accordion:hover {
+  background-color: #22374b; 
+}
+
+.accordion::after {
+  content: '^';
+  position: absolute;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+  top: calc(100%/2 - 15px);
+  right: 45px;
+  transform: rotate(180deg);
+}
+
+.active::after {
+  transform: rotate(0deg);
+}
+
+.panel {
+  padding: 15px;
+  background-color: #142536;
+  overflow: hidden;
+  display: none;
+}
+
+.panel__wrap {
+ display: flex;
+ flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .panel__wrap {
+  
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+  .panel__text {
+    width: 100%;
+    max-width: 693px;
+    height: auto;
+    padding-top: 30px;
+  }
+}
+
+.accordion__btn {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+}
+
+.accordion__text {
+  width: 70%;
+  font-size: 22px;
+  line-height: 1.27;
+  padding: 15px;
+  padding-right: 50px;
+}
+
+@media (min-width: 768px) {
+  .accordion__text {
+    padding-right: 150px;
+  }
+}
+@media (min-width: 1200px){
+  .accordion__text {
+    padding-right: 200px;
+  }
+}
+
+.panel__img {
+  margin: 30px auto;
+}
+
+@media (min-width: 1200px) {
+  .reg {
+    margin-top: -160px;
+  }
+}
+
+input {
+  width: 342px;
+  margin-bottom: 30px;
+  border-color: #5c738b;
+  background-color: #142536;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  input {
+    width: 280px;
+  }
+}
+
+.enter {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  
+}
+
+.login {
+  position: relative;
+}
+
+.login::after {
+  content: '+';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #142536;
+  background-color: #5c738b;
+  border-radius: 50%; 
+  left: 326px;
+  transform: rotate(45deg);
+  /* display: none;  */
+}
+
+@media (min-width: 1200px) {
+  .login::after {
+    left: 260px;
+  }  
+}
+
+input:hover {
+  border-color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+input::placeholder { 
+  color: #fff;
+  font-family: ALSStory;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal; 
+}
+
+.submit {
+  padding: 10px;
+  border-color: #fff;
+  border-radius: 30px;
+}
+
+@media (min-width: 1200px) {
+  .submit {
+    width: 235px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
